@@ -1,0 +1,16 @@
+[
+    {
+      "product_id": 1,
+      "image": "https://i.ibb.co/zQScQBZ/product.jpg",
+      "price": 29.99,
+      "description": "Elevate your casual look with our Organic Cotton T-Shirt. Crafted from premium organic cotton, this t-shirt offers supreme comfort and breathability. Its classic design and versatile white color make it a wardrobe essential for every season. Whether you're running errands or meeting friends for coffee, this t-shirt ensures effortless style and all-day comfort. With meticulous attention to detail and a commitment to sustainability, our Organic Cotton T-Shirt is the perfect choice for eco-conscious consumers who refuse to compromise on quality or style.",
+      "title": "Organic Cotton T-Shirt",
+      "color": "White",
+      "size": ["S" ,"M" , "L" , "XXL" , "XL" ] ,
+      "stock": 50,
+      "category": "Clothing",
+      "quality": "Premium"
+    }
+
+  ]
+  

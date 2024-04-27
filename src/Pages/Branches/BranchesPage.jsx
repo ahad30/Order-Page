@@ -4,7 +4,7 @@ import SingleBranch from "./components/SingleBranch";
 const BranchesPage = () => {
   return (
     <div>
-      BranchesPage
+      BranchesPages
       <SingleBranch />
     </div>
   );

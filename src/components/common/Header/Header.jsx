@@ -1,4 +1,5 @@
 import React from "react";
+import { RiSearchLine } from "react-icons/ri";
 import {
   Navbar,
   MobileNav,
@@ -94,67 +95,28 @@ const Header = () => {
                 as="a"
                 className="mr-7 cursor-pointer py-1.5 font-bold"
               >
-                <NavLink to="/">
-               Order
-                </NavLink>
-              </Typography>           
+                <NavLink to="/">Order</NavLink>
+              </Typography>
             </div>
 
             <div className="flex items-center gap-4 ">
-              <div className="mr-2 hidden lg:block">{navList}</div>   
-     
+              <div className="mr-2 hidden lg:block">{navList}</div>
             </div>
 
-            <div className="flex items-center gap-2">
-            <div>
-            <Link to="/login">  <Button className={`bg-[#59C6D2]`}>Log in</Button></Link>
-            </div>
-            <div className="gap-4  hidden lg:block">
-            <Link to="/register">  <Button className={`bg-[#23BE0A]`}>Register</Button></Link>
-            </div>
-        
-            <IconButton
-                variant="text"
-                className=" h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
-                ripple={false}
-                onClick={() => setOpenNav(!openNav)}
-              >
-                {openNav ? (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    className="h-6 w-6"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                ) : (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  </svg>
-                )}
-              </IconButton>
-            <div>
-            </div>
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Search..."
+                className="border border-gray-300 rounded px-4 py-2 pl-10 focus:outline-none w-full sm:w-auto"
+              />
+              <div className="absolute inset-y-0 right-0 flex items-center justify-center pr-3 pointer-events-none">
+                <RiSearchLine size={20} color="#555" />
+              </div>
             </div>
           </div>
-          <MobileNav open={openNav} className={`flex justify-center`}>{navList}</MobileNav>
+          <MobileNav open={openNav} className={`flex justify-center`}>
+            {navList}
+          </MobileNav>
         </Navbar>
       </div>
     );

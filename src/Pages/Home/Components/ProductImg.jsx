@@ -18,14 +18,14 @@ const ProductImageColumn = ({ product }) => {
         starDimension="20px"
         starSpacing="2px"
       />
-      <div className="text-xl text-[#860A35] font-semibold my-2">
+      <div className="text-lg md:text-xl text-[#860A35] font-semibold my-2">
         Price:
         {product.price}{" "}
         <span className="text-sm text-gray-500 line-through">
           {product.originalPrice}
         </span>
       </div>
-      <p className="text-gray-700 justify-around w-full">{product.details}</p>
+      <p className="text-xsm md:text-sm lg:text-lg text-gray-700 justify-around w-full">{product.details}</p>
     </div>
   );
 };

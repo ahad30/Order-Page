@@ -4,6 +4,9 @@ import MainLayout from "../components/layouts/MainLayout/MainLayout";
 import HomePage from "../Pages/Home/HomePage";
 import AboutPage from "../Pages/About/AboutPage";
 import BranchesPage from "../Pages/Branches/BranchesPage";
+import Product from "../Pages/admin/product/Product";
+import Order from "../Pages/admin/order/Order";
+import Transaction from "../Pages/admin/transaction/Transaction";
 
 export const routes = createBrowserRouter([
   {
@@ -39,6 +42,18 @@ export const routes = createBrowserRouter([
       {
         path: "/dashboard/admin",
         element: <div>Admin</div>,
+      },
+      {
+        path: "/dashboard/product",
+        element: <Product></Product>,
+      },
+      {
+        path: "/dashboard/order",
+        element: <Order></Order>,
+      },
+      {
+        path: "/dashboard/transaction",
+        element: <Transaction></Transaction>,
       },
     ],
   },

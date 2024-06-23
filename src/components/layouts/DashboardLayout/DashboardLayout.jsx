@@ -1,28 +1,39 @@
-import { Outlet } from "react-router-dom";
-import React from "react";
-import {
-  UploadOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-} from "@ant-design/icons";
+import { Link, Outlet } from "react-router-dom";
+
 import { Layout, Menu, theme } from "antd";
 const { Header, Content, Footer, Sider } = Layout;
-const items = [
-  UserOutlined,
-  VideoCameraOutlined,
-  UploadOutlined,
-  UserOutlined,
-].map((icon, index) => ({
-  key: String(index + 1),
-  icon: React.createElement(icon),
-  label: `nav ${index + 1}`,
-}));
+import { FiBox } from "react-icons/fi";
+import { MdOutlineShoppingCartCheckout } from "react-icons/md";
+import { MdOutlinePayments } from "react-icons/md";
+
 const DashboardLayout = () => {
+  const items = [
+    {
+      key: 1,
+      icon: <FiBox size={20}></FiBox>,
+      label: <Link to={"/dashboard/product"}>Product</Link>,
+    },
+    {
+      key: 2,
+      icon: (
+        <MdOutlineShoppingCartCheckout
+          size={20}
+        ></MdOutlineShoppingCartCheckout>
+      ),
+      label: <Link to={"/dashboard/order"}>Order</Link>,
+    },
+    {
+      key: 3,
+      icon: <MdOutlinePayments size={20}></MdOutlinePayments>,
+      label: <Link to={"/dashboard/transaction"}>Transaction</Link>,
+    },
+  ];
+
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
   return (
-    <Layout style={{minHeight : "100vh"}}>
+    <Layout style={{ minHeight: "100vh" }}>
       <Sider
         breakpoint="lg"
         collapsedWidth="0"
